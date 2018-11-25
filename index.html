@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/allss.css" />
+		<link rel="stylesheet" type="text/css" href="css/work02.css" />
+		<title>work02</title>
+	</head>
+
+	<body>
+		<div id="app">
+
+			<!--header-->
+			<header class="flex">
+				<a class="back" href=""></a>
+				<p class="flex-item title">京东推荐页</p>
+				<a class="user" href="#">
+					<i class="fa fa-search"></i>
+				</a>
+			</header>
+
+			<!--为您推荐-->
+			<h1 id="rec">为您推荐</h1>
+
+			<!--center-->
+			<!---->
+
+			<goods v-for="(item,index) in goods" :image="item.image" :name="item.name" :price="item.price" :image1="item.image1" :name1="item.name1" :price1="item.price1" :yuan="yuan" :point="point" :change="item.change" :change1="item.change1"></goods>
+
+			<!--下拉-->
+			<div class="crx"></div>
+
+			<!--footer-->
+			<footer class="weui-tab">
+				<div class="weui-tabbar">
+					<a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+						<span style="display: inline-block;position: relative;">
+						<i class="fa fa-home"></i>
+					</span>
+						<p class="weui-tabbar__label">首页</p>
+					</a>
+
+					<a href="javascript:;" class="weui-tabbar__item">
+						<i class="fa fa-address-book"></i>
+						<p class="weui-tabbar__label">分类</p>
+					</a>
+
+					<a href="javascript:;" class="weui-tabbar__item">
+						<span style="display: inline-block;position: relative;">
+                        <i class="fa fa-search"></i>
+					</span>
+						<p class="weui-tabbar__label">发现</p>
+					</a>
+
+					<a href="javascript:;" class="weui-tabbar__item">
+						<span style="display: inline-block;position: relative;">
+                        <i class="fa fa-cart-plus"></i>
+					</span>
+						<p class="weui-tabbar__label">购物车</p>
+					</a>
+
+					<a href="javascript:;" class="weui-tabbar__item">
+						<i class="fa fa-user"></i>
+						<p class="weui-tabbar__label">我的</p>
+					</a>
+				</div>
+			</footer>
+		</div>
+
+		<!--js-->
+		<script type="text/javascript" src="./js/vue.js"></script>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/work02.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>
